@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+    <title>gestiondemedicos</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="inicio.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="medicos.html">Gestion de medicos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="paciente.html">Gestion de pacientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gestion de medicos</a>
+          </li>
+        
+  </nav>
+  <h1 class="text-center text-success">Bienvenidos al sistema de gestión de citas médicas</h1>
+  <select class="form-control text-center" id="cit">
+    <option value="sis" >sisben</option>
+    <option value="com" >compensar</option>
+    <option value="nueva">nueva eps</option>
+  </select>
+  <form name="formulario" method="post" action="/send.php">
+    <!-- Campo de entrada de fecha -->
+    <h2>Selecciona la fecha deseada:</h2>
+    <input  type="date"id="fecha" name="fecha" min="2022-09-25" max="2023-01-25" step="2" />
+    <!-- Campo de entrada de hora -->
+    <h2>la hora deseada:</h2>
+    <input type="time" id="hora" name="hora" min="6:00" max="24:00" step="3600" />
+  </form>
+  <br>
+  <button onclick="generarPDF()" type="button " class="btn btn-primary  " data-toggle="button" aria-pressed="false" autocomplete="off">
+    Exportar PDF
+  </button>
+
+
+
+     <script src="jsPDF-1.3.2\dist\jspdf.min.js"></script> 
+     <script src="citas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
